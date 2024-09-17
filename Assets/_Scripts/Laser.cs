@@ -5,6 +5,17 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     public int damage = 5;
+    public float travelTime = 0f;
+
+    private void Update()
+    {
+        travelTime += Time.deltaTime;
+        
+        if (travelTime >= 2f)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
