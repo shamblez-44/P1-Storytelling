@@ -14,7 +14,10 @@ public class LaserEyes : MonoBehaviour
 
     void Update()
     {
-        timeToShoot -= Time.deltaTime;
+        if (timeToShoot > 0)
+        {
+            timeToShoot -= Time.deltaTime;
+        }
 
         if (Input.GetMouseButtonDown(0) && timeToShoot <= 0)
         {

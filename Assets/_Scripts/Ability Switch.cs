@@ -18,21 +18,29 @@ public class AbilitySwitch : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
-            if (selectedAbility >= transform.childCount -1) { 
+            if (selectedAbility >= transform.childCount -1) 
+            { 
                 selectedAbility = 0;
             }
             else
             {
                 selectedAbility++;
             }
+        if (previousSelectedAbility != selectedAbility)
+            {
+                selectAbility();
+            }
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             if (selectedAbility <= 0)
-                selectedAbility = transform.childCount - 1;
+            {
+                selectedAbility = transform.childCount -1;
+            }
             else
+            {
                 selectedAbility--;
-
+            }
         if (previousSelectedAbility != selectedAbility)
             {
                 selectAbility();
