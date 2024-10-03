@@ -6,38 +6,66 @@ using UnityEngine.UI;
 public class AbilitiesCooldown : MonoBehaviour
 {
     public Image abilityImage1;
-    public float cooldown1 = 5;
-    bool isCooldown = false;
+    public Image abilityImage2;
+    public float cooldown1 = 0;
+    public float cooldown2 = 0;
+    bool isCooldown1 = false;
+    bool isCooldown2 = false;
     public KeyCode ability1;
     public LaserEyes laser;
+    public Teleportation teleportation;
+    public AbilitySwitch abilitySwitch;
+    public int currentAbility = 0;
     
     // Start is called before the first frame update
     void Start()
     {
         abilityImage1.fillAmount = 0;
+        abilityImage2.fillAmount = 0;
         cooldown1 = laser.cooldown;
+        cooldown2 = teleportation.cooldown;
     }
 
     // Update is called once per frame
     void Update()
     {
         Ability1();
+        Ability2();
+        currentAbility = abilitySwitch.selectedAbility;
     }
     void Ability1()
     {
-        if(Input.GetMouseButtonDown(0) && isCooldown == false)
+        if(Input.GetMouseButtonDown(0) && isCooldown1 == false && currentAbility == 0)
         {
-            isCooldown = true;
+            isCooldown1 = true;
             abilityImage1.fillAmount = 1;
         }
 
-        if(isCooldown)
+        if(isCooldown1)
         {
             abilityImage1.fillAmount -= 1 / cooldown1 * Time.deltaTime;
             if(abilityImage1.fillAmount <= 0)
             {
                 abilityImage1.fillAmount = 0;
-                isCooldown = false;
+                isCooldown1 = false;
+            }
+        }
+    }
+    void Ability2()
+    {
+        if (Input.GetMouseButtonDown(0) && isCooldown2 == false && currentAbility == 1)
+        {
+            isCooldown2 = true;
+            abilityImage2.fillAmount = 1;
+        }
+
+        if (isCooldown2)
+        {
+            abilityImage2.fillAmount -= 1 / cooldown2 * Time.deltaTime;
+            if (abilityImage2.fillAmount <= 0)
+            {
+                abilityImage2.fillAmount = 0;
+                isCooldown2 = false;
             }
         }
     }
