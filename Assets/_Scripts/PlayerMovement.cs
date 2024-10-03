@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
+    public float maxSpeed = 5f;
+    private float speedCooldown = 0f;
     private float inputX;
     private float inputY;
     Rigidbody2D rb;
@@ -20,6 +22,16 @@ public class PlayerMovement : MonoBehaviour
         inputY = Input.GetAxisRaw("Vertical");
 
         faceMouse();
+
+        if (speed < maxSpeed)
+        {
+            speedCooldown += Time.deltaTime;
+        }
+
+        if (speedCooldown >= 3f)
+        {
+            speed = maxSpeed;
+        }
     }
 
     void faceMouse()
@@ -37,4 +49,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(inputX*speed, inputY*speed);
     }
+
+    public void Damage(int amount) => speed -= amount;
 }
