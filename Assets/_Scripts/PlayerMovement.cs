@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         if (speedCooldown >= 3f)
         {
             speed = maxSpeed;
+
+            speedCooldown = 0f;
         }
     }
 
