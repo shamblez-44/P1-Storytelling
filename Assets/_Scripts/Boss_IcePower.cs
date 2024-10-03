@@ -10,7 +10,7 @@ public class Boss_IcePower : MonoBehaviour
     public float cooldown = 10f;
     private float timeToShoot = 0;
     private GameObject Player;
-    
+    private Vector2 velocity;
 
     private void Start()
     {
