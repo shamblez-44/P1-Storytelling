@@ -10,7 +10,6 @@ public class Boss_IcePower : MonoBehaviour
     public float cooldown = 10f;
     private float timeToShoot = 0;
     private GameObject Player;
-    private Vector2 velocity;
 
     private void Start()
     {
@@ -18,7 +17,6 @@ public class Boss_IcePower : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
 
         Vector3 direction = Player.transform.position - transform.position;
-        velocity = new Vector2(direction.x, direction.y).normalized * fireForce;
     }
 
     void Update()
@@ -42,6 +40,6 @@ public class Boss_IcePower : MonoBehaviour
     public void Fire()
     {
         GameObject IcePower = Instantiate(icePrefab, firePoint.position, firePoint.rotation);
-        IcePower.GetComponent<Rigidbody2D>().AddForce(velocity, ForceMode2D.Impulse);
+        IcePower.GetComponent<Rigidbody2D>().AddForce(fireForce, ForceMode2D.Impulse);
     }
 }
