@@ -373,6 +373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 613323364}
+  - component: {fileID: 613323365}
   m_Layer: 0
   m_Name: GunFire
   m_TagString: Untagged
@@ -396,6 +397,23 @@ Transform:
   - {fileID: 205194807}
   m_Father: {fileID: 1064148932}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613323365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613323363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a05d814ce941e064eb7202bb2c6d7cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6285127887578012688, guid: 97058ce64c4f5b0469b0a2ec739ef371, type: 3}
+  firePoint: {fileID: 205194807}
+  gunFire: {fileID: 613323365}
+  fireForce: 20
+  cooldown: 4.4
 --- !u!1 &845455259
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,6 +40,6 @@ public class Boss_IcePower : MonoBehaviour
     public void Fire()
     {
         GameObject IcePower = Instantiate(icePrefab, firePoint.position, firePoint.rotation);
-        IcePower.GetComponent<Rigidbody2D>().AddForce(fireForce, ForceMode2D.Impulse);
+        IcePower.GetComponent<Rigidbody2D>().AddForce(firePoint.up, ForceMode2D.Impulse);
     }
 }

@@ -11,6 +11,7 @@ public class GunFire : MonoBehaviour
     public float cooldown = 4f;
     private float timeToShoot = 0f;
     private float rapidFire = 0f;
+    private bool secondShot = false;
 
 
     void Update()
@@ -33,15 +34,27 @@ public class GunFire : MonoBehaviour
         {
             rapidFire += Time.deltaTime;
         }
+
+        if(timeToShoot > 0.2f && secondShot == false)
+        {
+            gunFire.Fire();
+
+            secondShot = true;
+        }
+
+        if(timeToShoot > 0.4)
+        {
+            gunFire.Fire();
+
+            rapidFire = 0;
+
+            secondShot = false;
+        }
     }
 
     public void Fire()
     {
         GameObject Bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+        Bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
     }
 }
