@@ -9,9 +9,9 @@ public class GunFire : MonoBehaviour
     public GunFire gunFire;
     public float fireForce = 20f;
     public float cooldown = 4f;
-    private float timeToShoot = 0f;
-    private float rapidFire = 0f;
-    private bool secondShot = false;
+    public float timeToShoot = 0f;
+    public float rapidFire = 0f;
+    public int secondShot = 0;
 
 
     void Update()
@@ -27,28 +27,28 @@ public class GunFire : MonoBehaviour
 
             timeToShoot = cooldown;
 
-            rapidFire = 0.01f;
+            rapidFire = 1f;
         }
 
-        if(rapidFire > 0)
+        if(rapidFire >= 1f)
         {
             rapidFire += Time.deltaTime;
         }
 
-        if(timeToShoot > 0.2f && secondShot == false)
+        if(timeToShoot >= 1.2f && secondShot == 0)
         {
             gunFire.Fire();
 
-            secondShot = true;
+            secondShot = 1;
         }
 
-        if(timeToShoot > 0.4)
+        if(timeToShoot >= 1.4)
         {
             gunFire.Fire();
 
             rapidFire = 0;
 
-            secondShot = false;
+            secondShot = 0;
         }
     }
 
