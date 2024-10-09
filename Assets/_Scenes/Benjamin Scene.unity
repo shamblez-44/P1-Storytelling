@@ -413,10 +413,8 @@ MonoBehaviour:
   firePoint: {fileID: 205194807}
   gunFire: {fileID: 613323365}
   fireForce: 20
-  cooldown: 4.4
-  timeToShoot: 0
-  rapidFire: 0
-  secondShot: 0
+  cooldown: 4
+  timeBetweenShots: 0.5
 --- !u!1 &845455259
 GameObject:
   m_ObjectHideFlags: 0
