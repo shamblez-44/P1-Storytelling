@@ -35,14 +35,14 @@ public class GunFire : MonoBehaviour
             rapidFire += Time.deltaTime;
         }
 
-        if(timeToShoot >= 1.2f && secondShot == 0)
+        if(rapidFire >= 1.2f && secondShot == 0)
         {
             gunFire.Fire();
 
             secondShot = 1;
         }
 
-        if(timeToShoot >= 1.4)
+        if(rapidFire >= 1.4)
         {
             gunFire.Fire();
 
