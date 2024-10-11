@@ -232,7 +232,6 @@ MonoBehaviour:
   laserPrefab: {fileID: 5928086929836334098, guid: 84f66ffd2110f774c8e22662857e7715, type: 3}
   firePoint: {fileID: 140090383}
   fireForce: 20
-  laserEyes: {fileID: 387051524}
   cooldown: 0.5
 --- !u!1 &589649533
 GameObject:
@@ -1210,7 +1209,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.54709053, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -7,6 +7,6 @@ public class GangsterDoor : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(4);
     }
 }
