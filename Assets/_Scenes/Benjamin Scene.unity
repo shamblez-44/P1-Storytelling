@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 140090382}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 387051522}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1084,8 +1084,8 @@ GameObject:
   - component: {fileID: 1874007378}
   - component: {fileID: 1874007377}
   - component: {fileID: 1874007376}
-  - component: {fileID: 1874007375}
   - component: {fileID: 1874007380}
+  - component: {fileID: 1874007381}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -1093,28 +1093,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1874007375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874007374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c10b58dddb45d348a8e34cf56d742e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1689482615}
-  speed: 3
-  rotationSpeed: 0.01
-  distanceToShoot: 9
-  distanceToStop: 6
-  bulletPrefab: {fileID: 6285127887578012688, guid: 97058ce64c4f5b0469b0a2ec739ef371, type: 3}
-  firePoint: {fileID: 1374069209}
-  fireForce: 15
-  cooldown: 4
-  timeBetweenShots: 0.5
 --- !u!50 &1874007376
 Rigidbody2D:
   serializedVersion: 4
@@ -1128,7 +1106,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -1293,6 +1271,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1874007381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874007374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde2ed47ccdccb548a49d316f8025c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1689482615}
+  rotationSpeed: 0.01
+  distanceToShoot: 100
+  bulletPrefab: {fileID: 4279830932659891831, guid: b477a189418c78442b2aa3ac17bc80c4, type: 3}
+  firePoint: {fileID: 1374069209}
+  fireForce: 3
+  cooldown: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

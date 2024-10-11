@@ -5,13 +5,14 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public int damage = 5;
-    public float travelTime = 0f;
+    private float travelTime = 0f;
+    public float maxTravelTime = 3f;
 
     private void Update()
     {
         travelTime += Time.deltaTime;
 
-        if (travelTime >= 3f)
+        if (travelTime >= maxTravelTime)
         {
             Destroy(gameObject);
         }
