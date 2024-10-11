@@ -7,7 +7,6 @@ public class LaserEyes : MonoBehaviour
     public GameObject laserPrefab;
     public Transform firePoint;
     public float fireForce = 20f;
-    public LaserEyes laserEyes;
     public float cooldown = 0.5f;
     private float timeToShoot = 0;
 
@@ -21,7 +20,7 @@ public class LaserEyes : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && timeToShoot <= 0)
         {
-            laserEyes.Fire();
+            Fire();
 
             timeToShoot = cooldown;
         }
