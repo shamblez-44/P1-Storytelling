@@ -1092,7 +1092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1874007376
 Rigidbody2D:
   serializedVersion: 4
@@ -1288,8 +1288,8 @@ MonoBehaviour:
   distanceToShoot: 100
   bulletPrefab: {fileID: 4279830932659891831, guid: b477a189418c78442b2aa3ac17bc80c4, type: 3}
   firePoint: {fileID: 1374069209}
-  fireForce: 3
-  cooldown: 1
+  fireForce: 5
+  cooldown: 1.5
 --- !u!1 &1998533702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2092471560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1356,12 +1356,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1689482615}
   speed: 3
-  rotationSpeed: 0.01
+  rotationSpeed: 0.1
   distanceToShoot: 8
   distanceToStop: 6
   bulletPrefab: {fileID: 6285127887578012688, guid: 97058ce64c4f5b0469b0a2ec739ef371, type: 3}
   firePoint: {fileID: 1998533703}
-  fireForce: 15
+  fireForce: 12
   cooldown: 4
   timeBetweenShots: 0.5
 --- !u!50 &2092471561
