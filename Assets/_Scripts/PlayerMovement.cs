@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float inputX;
     private float inputY;
     Rigidbody2D rb;
+    public Animator animator;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
             speedCooldown = 0f;
         }
+        animator.SetFloat("Walk", speed);
     }
 
     void faceMouse()
