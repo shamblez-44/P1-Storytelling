@@ -12,7 +12,7 @@ public class IceBullet : MonoBehaviour
     {
         travelTime += Time.deltaTime;
 
-        if (travelTime >= 3f)
+        if (travelTime >= 99f)
         {
             Destroy(gameObject);
         }
