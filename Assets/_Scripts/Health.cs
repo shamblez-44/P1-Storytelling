@@ -36,6 +36,7 @@ public class Health : MonoBehaviour
                 if (isMinion) { 
                     GameObject.FindFirstObjectByType<CultBossVulnerability>().LostMinion();
                 }
+
                 Died?.Invoke();
             }
         }
