@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CultistScript : MonoBehaviour
+public class CultBossAttack : MonoBehaviour
 {
     public Transform target;
-    public float rotationSpeed = 0.0025f;
+    public float rotationSpeed = 0.005f;
     private Rigidbody2D rb;
 
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float fireForce = 15f;
+    public float fireForce = 200f;
     public float cooldown = 4f;
-    private float timeToShoot = 2f;
+    private float timeToShoot = 1f;
 
 
     private void Start()

@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     [SerializeField]
     private int _hp;
     
-
+    public bool isMinion = false;
     public int MaxHp => _maxHp;
 
     public int Hp
@@ -33,6 +33,10 @@ public class Health : MonoBehaviour
 
             if (_hp <= 0)
             {
+                if (isMinion) { 
+                    GameObject.FindFirstObjectByType<CultBossVulnerability>().LostMinion();
+                }
+
                 Died?.Invoke();
             }
         }
