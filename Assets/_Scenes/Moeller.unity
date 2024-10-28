@@ -548,31 +548,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!233 &885274734
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885274729}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 6860394243892124200}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.05099997, y: -0.013800003}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
 --- !u!1 &994451668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1695,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.07
       objectReference: {fileID: 0}
+    - target: {fileID: 2619840139457409916, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.050999463
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619840139457409916, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.013800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619840139457409916, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 6860394243892124200}
     - target: {fileID: 5433589254645910421, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -1829,9 +1816,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2249543912312321154, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
       insertIndex: -1
       addedObject: {fileID: 885274733}
-    - targetCorrespondingSourceObject: {fileID: 2249543912312321154, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 885274734}
   m_SourcePrefab: {fileID: 100100000, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
 --- !u!1 &6860394243892124190 stripped
 GameObject:
