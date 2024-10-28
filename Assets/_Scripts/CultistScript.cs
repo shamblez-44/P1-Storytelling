@@ -7,13 +7,12 @@ public class CultistScript : MonoBehaviour
     public Transform target;
     public float rotationSpeed = 0.0025f;
     private Rigidbody2D rb;
-    public float distanceToShoot = 8f;
 
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float fireForce = 15f;
     public float cooldown = 4f;
-    private float timeToShoot = 0f;
+    private float timeToShoot = 2f;
 
 
     private void Start()
@@ -23,7 +22,7 @@ public class CultistScript : MonoBehaviour
 
     private void Update()
     {
-        if (Vector2.Distance(target.position, transform.position) < distanceToShoot && timeToShoot <= 0)
+        if (timeToShoot <= 0)
         {
             Fire();
 
