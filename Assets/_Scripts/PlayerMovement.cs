@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float inputX;
     private float inputY;
     Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
     public Animator animator;
 
     void Start()
@@ -21,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
     {
         inputX = Input.GetAxisRaw("Horizontal");
         inputY = Input.GetAxisRaw("Vertical");
-
-        faceMouse();
 
         if (speed < maxSpeed)
         {
@@ -36,17 +35,6 @@ public class PlayerMovement : MonoBehaviour
             speedCooldown = 0f;
         }
         animator.SetFloat("Walk", speed);
-    }
-
-    void faceMouse()
-    {
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-        Vector2 direction = new Vector2(
-            mousePosition.x - transform.position.x,
-            mousePosition.y - transform.position.y);
-        transform.up = direction;
     }
 
     void FixedUpdate()
