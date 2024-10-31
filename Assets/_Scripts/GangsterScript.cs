@@ -16,7 +16,7 @@ public class GangsterScript : MonoBehaviour
     public float fireForce = 15f;
     public float cooldown = 4f;
     public float timeBetweenShots = 0.5f;
-    private float timeToShoot = 0f;
+    private float timeToShoot = 2f;
     private float rapidFire = 0f;
     private int secondShot = 0;
 
