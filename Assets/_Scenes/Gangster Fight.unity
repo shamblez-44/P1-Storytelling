@@ -8137,6 +8137,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 624869058}
     - target: {fileID: 6455996847767491243, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
+      propertyPath: Renderer
+      value: 
+      objectReference: {fileID: 1530482417}
+    - target: {fileID: 6455996847767491243, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1530482407}
@@ -8148,6 +8152,10 @@ PrefabInstance:
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 6285127887578012688, guid: 97058ce64c4f5b0469b0a2ec739ef371, type: 3}
+    - target: {fileID: 6455996847767491243, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
+      propertyPath: distanceToStop
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7089712524878072409, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.7895114
@@ -8380,6 +8388,11 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.44, y: 0.7}
   m_Direction: 0
+--- !u!212 &1530482417 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5502527823411611049, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
+  m_PrefabInstance: {fileID: 1530482403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1545540244
 GameObject:
   m_ObjectHideFlags: 0
