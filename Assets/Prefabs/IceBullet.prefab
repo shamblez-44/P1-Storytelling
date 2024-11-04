@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 27724727078811460}
   - component: {fileID: 8215012247354374438}
   - component: {fileID: 4503716682476684853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IceBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

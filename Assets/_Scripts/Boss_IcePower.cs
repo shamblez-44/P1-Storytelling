@@ -11,38 +11,69 @@ public class Boss_IcePower : MonoBehaviour
     public float fireForce = 10f;
     public float rotationSpeed = 0.0025f;
     public float cooldown = 10f;
-    private float timeToShoot = 0;
+    private float timeToIce = 0;
     public float speed = 5f;
-    public float timeToFire = 1f;
+    public float timeToShoot = 1f;
     private Rigidbody2D rb;
     public Animator animator;
+    public float FireCooldown = 1;
+    bool DoingAttack = false;
+    public float distanceToStop = 6f;
+    bool FacingRight = true;
+    public SpriteRenderer Renderer;
+
+
 
     
-
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        
+    }
+    
     void Update()
     {
-        if (timeToShoot > 0)
+        if (target.position.x < transform.position.x && !FacingRight)
         {
-            timeToShoot -= Time.deltaTime;
-            
+            Flip();
         }
-        if (timeToFire <=0)
+        if (target.position.x > transform.position.x && FacingRight)
         {
-            Shoot();
+            Flip();
         }
-        if (timeToFire > 0)
+        if (DoingAttack == true) 
         {
-            timeToFire -= Time.deltaTime;
+            timeToIce += 0.5f;
+            timeToShoot += 0.5f;
+            DoingAttack = false;
+        }
+        if (DoingAttack == false)
+        {
+            if (timeToShoot > 0)
+            {
+                timeToShoot -= Time.deltaTime;
+            }
+            if (timeToShoot <= 0)
+            {
+                Shoot();
+                DoingAttack = true;
+                timeToShoot = FireCooldown;
+            }
+
+            if (timeToIce > 0)
+            {
+                timeToIce -= Time.deltaTime;
+
+            }
+            if (timeToIce <= 0)
+            {
+                Ice();
+                DoingAttack = true;
+                timeToIce = cooldown;
+                FireCooldown = 1;
+            }
         }
 
-        if (timeToShoot <= 0)
-        {
-            Fire();
-
-            timeToShoot = cooldown;
-
-
-        }
 
         if (!target)
         {
@@ -52,11 +83,11 @@ public class Boss_IcePower : MonoBehaviour
         {
             RotateTowardsTarget();
         }
-        animator.SetFloat("IcyPower", timeToShoot);
-        animator.SetFloat("Shoot",timeToFire);
+        animator.SetFloat("IcyPower", timeToIce);
+        animator.SetFloat("Shoot",timeToShoot);
     }
 
-    public void Fire()
+    public void Ice()
     {
         GameObject IcePower = Instantiate(icePrefab, firePoint.position, firePoint.rotation);
         IcePower.GetComponent<Rigidbody2D>().AddForce(firePoint.up, ForceMode2D.Impulse);
@@ -67,6 +98,22 @@ public class Boss_IcePower : MonoBehaviour
         GameObject Bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
     }
+    
+    private void FixedUpdate()
+
+    {
+        if (Vector2.Distance(target.position, transform.position) >= distanceToStop)
+        {
+            rb.velocity = transform.up * speed;
+            animator.SetFloat("Moving",1f);
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+            animator.SetFloat("Moving", 0f);
+        }
+    }
+  
 
     private void RotateTowardsTarget()
     {
@@ -74,6 +121,12 @@ public class Boss_IcePower : MonoBehaviour
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg - 90f;
         Quaternion q = Quaternion.Euler(new Vector3(0, 0, angle));
         transform.localRotation = Quaternion.Slerp(transform.localRotation, q, rotationSpeed);
+
+    }
+    private void Flip()
+    {
+        FacingRight = !FacingRight;
+        Renderer.flipX = FacingRight;
     }
     private void GetTarget()
     {
