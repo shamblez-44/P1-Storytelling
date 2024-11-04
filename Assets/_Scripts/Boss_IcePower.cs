@@ -18,9 +18,16 @@ public class Boss_IcePower : MonoBehaviour
     public Animator animator;
     public float FireCooldown = 1;
     bool DoingAttack = false;
+    public float distanceToStop = 6f;
+
+
 
     
-
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+    
     void Update()
     {
         if (DoingAttack == true) 
@@ -79,6 +86,22 @@ public class Boss_IcePower : MonoBehaviour
         GameObject Bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
     }
+    
+    private void FixedUpdate()
+
+    {
+        if (Vector2.Distance(target.position, transform.position) >= distanceToStop)
+        {
+            rb.velocity = transform.up * speed;
+            animator.SetFloat("Moving",1f);
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+            animator.SetFloat("Moving", 0f);
+        }
+    }
+  
 
     private void RotateTowardsTarget()
     {

@@ -135,7 +135,7 @@ Rigidbody2D:
   m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -218,7 +218,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6280246854259284241, guid: 54c77e6dbaa1e7446bcfa6d699269a92, type: 3}
   firePoint: {fileID: 555816416115089723}
   fireForce: 15
-  cooldown: 1
+  cooldown: 0.5
   timeToShoot: 0
 --- !u!114 &3011764588940454932
 MonoBehaviour:
@@ -234,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 10
   _hp: 0
+  isMinion: 0
   Healed:
     m_PersistentCalls:
       m_Calls: []
