@@ -12,7 +12,7 @@ public class IntroCutsceneToFirstFight : MonoBehaviour
 
     IEnumerator NextScene()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(35f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
