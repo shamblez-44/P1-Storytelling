@@ -14,6 +14,7 @@ public class Health : MonoBehaviour
     
     public bool isMinion = false;
     public int MaxHp => _maxHp;
+    public bool isBoss = false;
 
     public int Hp
     {
@@ -30,7 +31,10 @@ public class Health : MonoBehaviour
             {
                 Healed?.Invoke(_hp);
             }
-
+            if (isBoss && _hp < 25)
+            {
+                AudioManager.Instance.StartEndSound();
+            }
             if (_hp <= 0)
             {
                 if (isMinion) { 
