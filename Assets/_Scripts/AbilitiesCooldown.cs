@@ -16,6 +16,8 @@ public class AbilitiesCooldown : MonoBehaviour
     public Teleportation teleportation;
     public AbilitySwitch abilitySwitch;
     public int currentAbility = 0;
+    public Image HighlightT;
+    public Image HighlightL;
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,8 @@ public class AbilitiesCooldown : MonoBehaviour
         abilityImage2.fillAmount = 0;
         cooldown1 = laser.cooldown;
         cooldown2 = teleportation.cooldown;
+        HighlightL.fillAmount = 0;
+        HighlightT.fillAmount = 0;
     }
 
     // Update is called once per frame
@@ -50,6 +54,11 @@ public class AbilitiesCooldown : MonoBehaviour
                 isCooldown1 = false;
             }
         }
+        if(currentAbility == 0)
+        {
+            HighlightL.fillAmount = 1;
+            HighlightT.fillAmount = 0;
+        }
     }
     void Ability2()
     {
@@ -68,5 +77,11 @@ public class AbilitiesCooldown : MonoBehaviour
                 isCooldown2 = false;
             }
         }
+        if (currentAbility == 1)
+        {
+            HighlightL.fillAmount = 0;
+            HighlightT.fillAmount = 1;
+        }
+
     }
 }
