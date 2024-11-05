@@ -612,9 +612,9 @@ MonoBehaviour:
   cooldown1: 0
   cooldown2: 0
   ability1: 0
-  laser: {fileID: 0}
-  teleportation: {fileID: 0}
-  abilitySwitch: {fileID: 0}
+  laser: {fileID: 949777516}
+  teleportation: {fileID: 1007673427}
+  abilitySwitch: {fileID: 1417413950}
   currentAbility: 0
 --- !u!114 &343733796
 MonoBehaviour:
