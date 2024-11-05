@@ -3782,7 +3782,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   maxSpeed: 5
-  animator: {fileID: 0}
 --- !u!212 &624869057
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8228,6 +8227,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 78303441067183553, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1530482416}
+    - targetCorrespondingSourceObject: {fileID: 78303441067183553, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1530482418}
     - targetCorrespondingSourceObject: {fileID: 2249543912312321154, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1530482408}
@@ -8341,6 +8343,18 @@ MonoBehaviour:
   Died:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1530482418}
+        m_TargetAssemblyTypeName: ToEndScene, Assembly-CSharp
+        m_MethodName: Death
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
       - m_Target: {fileID: 1530482404}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -8393,6 +8407,18 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5502527823411611049, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
   m_PrefabInstance: {fileID: 1530482403}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1530482418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530482404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48de2411a95948b4cbafea3911eb6605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1545540244
 GameObject:
   m_ObjectHideFlags: 0
