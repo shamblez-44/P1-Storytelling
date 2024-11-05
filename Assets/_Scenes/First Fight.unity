@@ -612,9 +612,9 @@ MonoBehaviour:
   cooldown1: 0
   cooldown2: 0
   ability1: 0
-  laser: {fileID: 0}
-  teleportation: {fileID: 0}
-  abilitySwitch: {fileID: 0}
+  laser: {fileID: 949777516}
+  teleportation: {fileID: 1007673427}
+  abilitySwitch: {fileID: 1417413950}
   currentAbility: 0
 --- !u!114 &343733796
 MonoBehaviour:
@@ -1834,7 +1834,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382250370}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

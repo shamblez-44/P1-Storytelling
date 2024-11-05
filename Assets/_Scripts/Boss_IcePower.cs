@@ -19,6 +19,8 @@ public class Boss_IcePower : MonoBehaviour
     public float FireCooldown = 1;
     bool DoingAttack = false;
     public float distanceToStop = 6f;
+    bool FacingRight = true;
+    public SpriteRenderer Renderer;
 
 
 
@@ -26,23 +28,32 @@ public class Boss_IcePower : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
     }
     
     void Update()
     {
+        if (target.position.x < transform.position.x && !FacingRight)
+        {
+            Flip();
+        }
+        if (target.position.x > transform.position.x && FacingRight)
+        {
+            Flip();
+        }
         if (DoingAttack == true) 
         {
             timeToIce += 0.5f;
             timeToShoot += 0.5f;
             DoingAttack = false;
         }
-        if (DoingAttack == false) 
+        if (DoingAttack == false)
         {
             if (timeToShoot > 0)
             {
                 timeToShoot -= Time.deltaTime;
             }
-            if (timeToShoot <=0 ) 
+            if (timeToShoot <= 0)
             {
                 Shoot();
                 DoingAttack = true;
@@ -52,7 +63,7 @@ public class Boss_IcePower : MonoBehaviour
             if (timeToIce > 0)
             {
                 timeToIce -= Time.deltaTime;
-            
+
             }
             if (timeToIce <= 0)
             {
@@ -60,8 +71,9 @@ public class Boss_IcePower : MonoBehaviour
                 DoingAttack = true;
                 timeToIce = cooldown;
                 FireCooldown = 1;
+            }
         }
-    }
+
 
         if (!target)
         {
@@ -109,6 +121,12 @@ public class Boss_IcePower : MonoBehaviour
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg - 90f;
         Quaternion q = Quaternion.Euler(new Vector3(0, 0, angle));
         transform.localRotation = Quaternion.Slerp(transform.localRotation, q, rotationSpeed);
+
+    }
+    private void Flip()
+    {
+        FacingRight = !FacingRight;
+        Renderer.flipX = FacingRight;
     }
     private void GetTarget()
     {
