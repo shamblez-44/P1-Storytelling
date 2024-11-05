@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float inputY;
     Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    public Animator animator;
+    //public Animator animator;
 
     void Start()
     {
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
             speedCooldown = 0f;
         }
-        animator.SetFloat("Walk", speed);
+       // animator.SetFloat("Walk", speed);
     }
 
     void FixedUpdate()

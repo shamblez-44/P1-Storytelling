@@ -81,6 +81,10 @@ public class GangsterScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(target== null)
+        {
+            return;
+        }
         if (Vector2.Distance(target.position, transform.position) >= distanceToStop)
         {
             rb.velocity = transform.up * speed;
