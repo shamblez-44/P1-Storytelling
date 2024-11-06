@@ -434,7 +434,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Goofy_Scream
   - m_Version: 1
-    m_Start: 30.032
+    m_Start: 25
     m_ClipIn: 0
     m_Asset: {fileID: 2469685227808419073}
     m_Duration: 4.968
