@@ -3859,6 +3859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   maxSpeed: 5
+  Renderer: {fileID: 624869057}
 --- !u!212 &624869057
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3902,7 +3903,7 @@ SpriteRenderer:
   m_SortingOrder: 15
   m_Sprite: {fileID: -723604127, guid: f795052ed682fce4cb8a6a05ba5e40ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.28, y: 0.66}
