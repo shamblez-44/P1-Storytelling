@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Tutorial.unity
     guid: 795b81be21cb60c40bc95fe4dc6c8c05
+  - enabled: 1
+    path: Assets/_Scenes/Cutscene/OfficeCutscene.unity
+    guid: 0542924b8a88dbd4c8b0965c18b7d40d
   m_configObjects: {}
