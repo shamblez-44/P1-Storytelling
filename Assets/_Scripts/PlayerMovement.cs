@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool FacingRight = true;
     public SpriteRenderer Renderer;
+    public Animator animator;
     //public Animator animator;
 
     void Start()
@@ -46,6 +47,14 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
         // animator.SetFloat("Walk", speed);
+        if (rb.velocity.x != 0 || rb.velocity.y != 0)
+        {
+            animator.SetFloat("Run", 1);
+        }
+        else
+        {
+            animator.SetFloat("Run", 0);
+        }
     }
 
     void FixedUpdate()

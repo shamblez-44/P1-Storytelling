@@ -47,6 +47,16 @@ public class AbilitySwitch : MonoBehaviour
             }
 
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            selectedAbility = 0;
+            selectAbility();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            selectedAbility = 1;
+            selectAbility();
+        }
     }
 
     void selectAbility()
