@@ -3010,6 +3010,7 @@ MonoBehaviour:
   _maxHp: 100
   _hp: 0
   isMinion: 0
+  isGangster: 1
   isBoss: 0
   Healed:
     m_PersistentCalls:
@@ -7294,6 +7295,7 @@ MonoBehaviour:
   _maxHp: 40
   _hp: 0
   isMinion: 0
+  isGangster: 1
   isBoss: 0
   Healed:
     m_PersistentCalls:
@@ -8957,6 +8959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1623253437}
   - component: {fileID: 1623253438}
+  - component: {fileID: 1623253439}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -9031,6 +9034,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1623253439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623253436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48de2411a95948b4cbafea3911eb6605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gangsters: 5
 --- !u!1 &1661928644
 GameObject:
   m_ObjectHideFlags: 0
@@ -9067,6 +9083,7 @@ MonoBehaviour:
   _maxHp: 40
   _hp: 0
   isMinion: 0
+  isGangster: 1
   isBoss: 0
   Healed:
     m_PersistentCalls:
@@ -10108,6 +10125,7 @@ MonoBehaviour:
   _maxHp: 40
   _hp: 0
   isMinion: 0
+  isGangster: 1
   isBoss: 0
   Healed:
     m_PersistentCalls:
@@ -12743,6 +12761,7 @@ MonoBehaviour:
   _maxHp: 40
   _hp: 0
   isMinion: 0
+  isGangster: 1
   isBoss: 0
   Healed:
     m_PersistentCalls:

@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     private int _hp;
     
     public bool isMinion = false;
+    public bool isGangster = false;
     public int MaxHp => _maxHp;
     public bool isBoss = false;
 
@@ -39,6 +40,11 @@ public class Health : MonoBehaviour
             {
                 if (isMinion) { 
                     GameObject.FindFirstObjectByType<CultBossVulnerability>().LostMinion();
+                }
+
+                if (isGangster)
+                {
+                    GameObject.FindFirstObjectByType<ToEndScene>().LostGangster();
                 }
 
                 Died?.Invoke();
