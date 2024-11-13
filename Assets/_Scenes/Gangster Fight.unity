@@ -156,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -860, y: -300}
+  m_AnchoredPosition: {x: -870, y: -330}
   m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &10749765
@@ -4400,7 +4400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -725, y: -300}
+  m_AnchoredPosition: {x: -725, y: -330}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &730643584
@@ -4563,11 +4563,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7089712524878072409, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7089712524878072409, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3
+      value: 10.59
       objectReference: {fileID: 0}
     - target: {fileID: 7089712524878072409, guid: 1cbf22d5d149d1547ace2cf309d37571, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5088,8 +5088,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1000}
-  m_SizeDelta: {x: 1500, y: 40}
+  m_AnchoredPosition: {x: 0, y: 1030}
+  m_SizeDelta: {x: 1500, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &861796103
 MonoBehaviour:
@@ -5927,7 +5927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -725, y: -300}
+  m_AnchoredPosition: {x: -725, y: -330}
   m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1003185839
@@ -6236,7 +6236,7 @@ Transform:
   m_GameObject: {fileID: 1049335360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1854, y: 0.4181, z: -9}
+  m_LocalPosition: {x: 0, y: 0, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7158,7 +7158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -725, y: -300}
+  m_AnchoredPosition: {x: -725, y: -330}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1324010681
@@ -8783,7 +8783,7 @@ Transform:
   m_GameObject: {fileID: 1592420397}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1854, y: 0.4181, z: -9}
+  m_LocalPosition: {x: 0, y: 0, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10925,7 +10925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -860, y: -300}
+  m_AnchoredPosition: {x: -870, y: -330}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1870054468
@@ -12600,7 +12600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -860, y: -300}
+  m_AnchoredPosition: {x: -870, y: -330}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2060855985
@@ -13060,11 +13060,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7395229230161648520, guid: d3f54a4d41a4b864085ac38a49d183c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1854
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7395229230161648520, guid: d3f54a4d41a4b864085ac38a49d183c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4181
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7395229230161648520, guid: d3f54a4d41a4b864085ac38a49d183c7, type: 3}
       propertyPath: m_LocalPosition.z

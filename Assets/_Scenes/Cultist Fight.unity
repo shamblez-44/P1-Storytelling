@@ -688,7 +688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -860, y: -240}
+  m_AnchoredPosition: {x: -870, y: -330}
   m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &104244416
@@ -1065,6 +1065,7 @@ MonoBehaviour:
   _maxHp: 20
   _hp: 0
   isMinion: 1
+  isGangster: 0
   isBoss: 0
   Healed:
     m_PersistentCalls:
@@ -2301,7 +2302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 850}
+  m_AnchoredPosition: {x: 0, y: 1030}
   m_SizeDelta: {x: 1500, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &275805501
@@ -2777,6 +2778,7 @@ MonoBehaviour:
   _maxHp: 100
   _hp: 0
   isMinion: 0
+  isGangster: 0
   isBoss: 0
   Healed:
     m_PersistentCalls:
@@ -2946,6 +2948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48de2411a95948b4cbafea3911eb6605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gangsters: 5
 --- !u!1 &351895181
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,7 +3662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -725, y: -240}
+  m_AnchoredPosition: {x: -725, y: -330}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &459599150
@@ -4820,6 +4823,7 @@ MonoBehaviour:
   _maxHp: 20
   _hp: 0
   isMinion: 1
+  isGangster: 0
   isBoss: 0
   Healed:
     m_PersistentCalls:
@@ -6366,6 +6370,7 @@ MonoBehaviour:
   _maxHp: 20
   _hp: 0
   isMinion: 1
+  isGangster: 0
   isBoss: 0
   Healed:
     m_PersistentCalls:
@@ -9145,7 +9150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -860, y: -240}
+  m_AnchoredPosition: {x: -870, y: -330}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295490667
@@ -9775,6 +9780,7 @@ MonoBehaviour:
   _maxHp: 20
   _hp: 0
   isMinion: 1
+  isGangster: 0
   isBoss: 0
   Healed:
     m_PersistentCalls:
@@ -10402,7 +10408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -725, y: -240}
+  m_AnchoredPosition: {x: -725, y: -330}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1479001947
@@ -11565,7 +11571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -725, y: -240}
+  m_AnchoredPosition: {x: -725, y: -330}
   m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1704002286
@@ -12429,7 +12435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -860, y: -240}
+  m_AnchoredPosition: {x: -870, y: -330}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1951208028
