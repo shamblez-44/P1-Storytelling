@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
+    private float diagonalSpeed = 3.5355f;
     public float maxSpeed = 5f;
     private float speedCooldown = 0f;
     private float inputX;
@@ -59,7 +60,14 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(inputX*speed, inputY*speed);
+        if(inputX > 0 &&  inputY > 0)
+        {
+            rb.velocity = new Vector2(inputX * diagonalSpeed, inputY * diagonalSpeed);
+        }
+        else
+        {
+            rb.velocity = new Vector2(inputX * speed, inputY * speed);
+        }
     }
 
     public void Damage(int amount) => speed -= amount;
